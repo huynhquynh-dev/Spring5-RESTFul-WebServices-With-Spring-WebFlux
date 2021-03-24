@@ -1,14 +1,17 @@
 package com.lionhuynh.spring5restwebflux.model;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Category {
 
     @Id
-    private Long id;
+    private String id;
     private String description;
 }
